@@ -4,6 +4,11 @@
 -- Features added: Materialized Views, JSONB metrics, Notifications, Parallelized Loading
 -- =========================================================
 
+-- ======================
+-- Credits
+-- ======================
+-- Built on: https://github.com/open-risk/energyLedger/tree/main
+
 -- ====================================
 -- Session and Configuration Settings
 -- ====================================
@@ -202,8 +207,3 @@ ALTER TABLE ONLY public.transaction_leg
     ADD CONSTRAINT fk_account FOREIGN KEY (account_id) REFERENCES public.account(id);
 ALTER TABLE ONLY public.transaction_leg
     ADD CONSTRAINT fk_transaction FOREIGN KEY (transaction_id) REFERENCES public.transaction(id);
-
--- ======================
--- Credits
--- ======================
--- Built on: https://github.com/open-risk/energyLedger/tree/main
